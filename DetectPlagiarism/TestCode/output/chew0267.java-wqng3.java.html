@@ -1,0 +1,104 @@
+<html><head><title>chew0267.java VS wqng3.java</title><link rel="stylesheet" type="text/css" href="..\css\style.css"></head><body><pre>chew0267.java VS wqng3.java
+Reserved Comparison Lengths: 91 94 101
+Similarity: 0.901
+All Tokens Comparison Lengths: 117 120 127
+Similarity: 0.921
+
+</pre><table><tr><td><pre><font color="#FFFF00">import java.util.Scanner;
+
+public </font><font color="#00FF00">class HorizontalHistogram {
+
+	public static void main(String[] args) {
+		
+		Scanner in = new Scanner(System.in);
+		
+		int numGrades = in.nextInt();
+		
+		int[] grades = new int[numGrades];
+		for(int i = 0; i < numGrades; i++) {
+			grades[i] = in.</font><font color="#00FFFF">nextInt();
+		}
+		
+		int[] storage = new int[10</font><font color="#FF00FF">];
+		for(int i = 0; i <</font> <font color="#FF0000">10; i++) {
+			storage[i] = 0;
+		}
+		
+		for(int gradeIndex = 0; gradeIndex < numGrades; gradeIndex++) {
+			int storageIndex;
+			if (grades[gradeIndex] < 100) {
+				storageIndex = grades[gradeIndex]/10;
+			} else {
+				storageIndex = 9;
+			}	
+			storage[storageIndex]++;
+		}
+		
+		for(int i = 0; i < storage.length; i++) {
+			int start = i*10;
+			int end = i*10+9;
+			if (i ==</font> storage.length - <font color="#0000FF">1) {
+				end = 100;
+			}
+			
+			System.out.printf("%3d -%3d: ", start, end);
+			
+			int numStars = storage[i];
+			for(int count = 0; count < numStars; count++) {
+				System.out.print("*");
+			}
+			System.out.println(</font>);
+		}
+
+	}
+
+}
+</pre></td><td><pre><font color="#FFFF00">import java.util.Scanner;
+public class</font> PrintHorizontalHistogram {
+	
+	public <font color="#00FFFF">static int[] bins = new int[10]</font>;
+	public static int[<font color="#00FF00">] grades;
+	public static void main(String[] args){
+		
+		Scanner in=new Scanner(System.in);
+		//System.out.print("Enter the number of students: ");
+		
+		int numStudents=in.nextInt();
+	   
+		int[] grades= new int[numStudents];
+	   for(int i=0;i<numStudents;i++){
+		  // System.out.print("Enter the grade for student " + (i + 1) + ": ");
+		   grades[i]= in.</font><font color="#FF00FF">nextInt();
+	   }
+	   
+		for(int i=0;i</font><font color="#FF0000"><bins.length;i++){
+			bins[i]=0;
+		}
+		for(int gradeNum=0; gradeNum< grades.length;gradeNum++){
+			int binNum;
+			if(grades[gradeNum]<100){
+				binNum=grades[gradeNum]/10;
+			}else{
+				binNum=9;
+			}
+			bins[binNum]++;
+		}
+		for(int i=0;i<bins.length;i++){
+			int lowerbound=i*10;
+			int upperbound=i*10+9;
+			if(i==</font>bins.length<font color="#0000FF">-1){
+				upperbound=100;
+			}
+			System.out.printf("%3d -%3d: ", lowerbound,upperbound);
+			int numStars=bins[i];
+			for(int count=0;count<numStars;count++){
+				System.out.print("*");
+			}
+			System.out.println(</font>);
+		}
+		System.out.println();
+		}
+
+	}
+
+</pre></td></tr></table></body></html>

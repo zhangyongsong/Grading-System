@@ -1,0 +1,101 @@
+<html><head><title>sychua1.java VS thuong1.java</title><link rel="stylesheet" type="text/css" href="..\css\style.css"></head><body><pre>sychua1.java VS thuong1.java
+Reserved Comparison Lengths: 61 114 92
+Similarity: 0.535
+All Tokens Comparison Lengths: 75 158 118
+Similarity: 0.475
+
+</pre><table><tr><td><pre><font color="#FF0000">import java.util.Scanner;
+public class PrintHorizonalHistogram {
+	public static void main(String[] args) {
+		</font><font color="#FF00FF">int numGrades; 
+			
+		Scanner in = new Scanner(System.in);
+		numGrades = in.nextInt(</font>); // get the number
+		
+		int[<font color="#00FF00">] grades = new int[numGrades];
+		
+		//get the grades 
+		for (int i = 0;i<grades.length;i++){
+			grades[i] = in.</font><font color="#00FFFF">nextInt();
+		}
+				
+		int[] histogramBin = new int[10</font><font color="#FFFF00">];
+		for (int i=0;i<10;i++</font>){
+			histogramBin[i] = 0;
+		}//initialize
+		
+		<font color="#FF0000">int temp; //store the grades into the bin
+		for (int i=0;i<numGrades;i++</font>){
+			if ( grades[i] == 100 ){
+				histogramBin[9]++;
+			}
+			<font color="#00FF00">else{
+			temp = grades[i]/10</font>;
+			histogramBin<font color="#0000FF">[temp]++ ;
+			}
+		}
+		
+		//printing out the histogram
+		for(int i=0;i<10;i++){
+			if( i == 9 ){
+				System</font>.out.print(" " + i*10 + " -" + ((i*10) + 10) + ": " );
+			}
+			else{
+				if (i == 0){
+					System.out.print("  " + i*10 + " -  " + ((i*10) + 9) + ": " );
+				}
+				else
+					System.out.print(" " + i*10 + " - " + ((i*10) + 9) + ": " );
+			}
+
+			while ( histogramBin[i] != 0 ){
+				System.out.print("*");
+				histogramBin[i]--;
+			}
+			System.out.println();
+		}
+		
+	}
+}
+</pre></td><td><pre><font color="#FF0000">import java.util.Scanner;
+public class PrintHorizontalHistogram {
+
+		public static void main(String[] args) {
+		int</font>[] grades;
+		<font color="#00FFFF">int numSt,num;
+		int[] bins=new int[10</font><font color="#FF00FF">];
+		
+		Scanner in=new Scanner(System.in);
+		numSt=in.</font><font color="#00FF00">nextInt();//read number of students
+		grades=new int[numSt];
+		for(int i=0;i<numSt;i++){
+			grades[i]=in.</font><font color="#FF0000">nextInt();//read grades
+		}
+		//collect histogram bins
+		for(int i=0;i<numSt;i</font><font color="#00FF00">++){
+			num=grades[i] / </font><font color="#FFFF00">10;//check the range
+			for(int j=0;j<10;j++</font>){
+				if (num==j) bins[j]++;//collect the bins
+			}
+			if(num==10) bins[<font color="#0000FF">9]++;//for 100
+		}
+		
+		//print the histogram
+		for(int line=0;line<10;line++){
+			if(line==9){
+				System</font>.out.printf("%3d -%3d: ",line*10,(line*10+10));//print the last line
+			}else{
+			System.out.printf("%3d -%3d: ",line*10,(line*10+9));//print rest head lines
+			}
+			
+			for(int bin=0;bin<bins[line];bin++){//print bins
+				System.out.print("*");
+		    }
+			System.out.println();
+		}
+		
+
+	}
+
+}
+</pre></td></tr></table></body></html>

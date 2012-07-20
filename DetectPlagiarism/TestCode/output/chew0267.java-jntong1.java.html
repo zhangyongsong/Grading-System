@@ -1,0 +1,101 @@
+<html><head><title>chew0267.java VS jntong1.java</title><link rel="stylesheet" type="text/css" href="..\css\style.css"></head><body><pre>chew0267.java VS jntong1.java
+Reserved Comparison Lengths: 48 94 111
+Similarity: 0.432
+All Tokens Comparison Lengths: 70 120 152
+Similarity: 0.461
+
+</pre><table><tr><td><pre><font color="#00FF00">import java.util.Scanner;
+
+public class HorizontalHistogram {
+
+	public </font><font color="#00FF00">static void main(String[</font><font color="#00FFFF">] args) {
+		
+		Scanner in = new Scanner(System.in);
+		
+		int numGrades = in.nextInt(</font>);
+		
+		int[<font color="#FF0000">] grades = new int[numGrades];
+		for(int i = 0; i < numGrades; i++) {
+			grades[i] = in.</font><font color="#0000FF">nextInt();
+		}
+		
+		int[] storage = new int[10</font><font color="#00FFFF">];
+		for(int i = 0; i <</font> 10; i++) {
+			storage[i] = <font color="#FF00FF">0;
+		}
+		
+		for(int gradeIndex = 0; gradeIndex < numGrades; gradeIndex++</font>) {
+			int storageIndex;
+			if (grades[gradeIndex] < 100) {
+				storageIndex <font color="#0000FF">= grades[gradeIndex]/10</font>;
+			} else {
+				storageIndex = 9;
+			}	
+			storage[storageIndex]+<font color="#FFFF00">+;
+		}
+		
+		for(int i = 0; i < storage.length; i++</font>) {
+			int start = i*10;
+			int end = i*10+9;
+			if (i == storage.length - 1) {
+				end = 100;
+			}
+			
+			System.out.printf("%3d -%3d: ", start, end);
+			
+			int numStars = storage[i];
+			for(int count = 0; count <font color="#FF0000">< numStars; count++) {
+				System.out.print("*");
+			}
+			System.out.println(</font>);
+		}
+
+	}
+
+}
+</pre></td><td><pre><font color="#00FF00">import java.util.Scanner;
+
+public class PrintHorizontalHistogram {
+	public static</font> int[] grades;
+	public <font color="#0000FF">static int[] num = new int [10]</font>;    // to put in 0 - 10 etc
+	
+	public <font color="#00FF00">static void main(String[]</font> args) {
+		readHistogram();
+		calculateHistogram();
+		printHistogram();
+	}
+	
+	public static void <font color="#00FFFF">readHistogram() {
+		Scanner in = new Scanner(System.in);
+		int numStudents = in.</font><font color="#FF0000">nextInt();
+		grades = new int[numStudents];
+		for(int i =0; i<numStudents; i++) {
+			grades[i] = in.nextInt(</font>);
+		}
+	}
+	
+	public static void <font color="#FF00FF">calculateHistogram() {
+		for (int i =0; i<grades.length; i++</font>) {
+			if (grades[i] == 100)
+				num[9]++;
+			else
+				num<font color="#0000FF">[grades[i]/10</font>]++;
+		}
+	}
+	
+	public static void <font color="#FFFF00">printHistogram() {
+		for(int i=0; i<num.length; i++</font>) {
+			if(i==9)
+				System.out.print(" " + i*10 + " -" + "100: " );
+			else if (i==0)
+				System.out.print("  " + i + " -  " + (num.length-1) + ": ");
+			else
+				System.out.print(" " + i*10 + " - " + (i*10 + 9) + <font color="#00FFFF">": ");
+			for (int star =0; star <</font>num[i<font color="#FF0000">]; star++) {
+				System.out.print("*");
+			}
+			System.out.println(</font>);
+		}
+	}
+}
+</pre></td></tr></table></body></html>

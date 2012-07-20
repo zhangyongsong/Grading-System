@@ -1,0 +1,142 @@
+<html><head><title>nguy0125.java VS seey0010.java</title><link rel="stylesheet" type="text/css" href="..\css\style.css"></head><body><pre>nguy0125.java VS seey0010.java
+Reserved Comparison Lengths: 65 111 117
+Similarity: 0.556
+All Tokens Comparison Lengths: 79 148 154
+Similarity: 0.513
+
+</pre><table><tr><td><pre><font color="#FF0000">import java.util.Scanner;
+
+public class</font> PrintHorizontalHistogram{	//Saved as PrintHorizontalHistogram.java
+
+	
+	static int numStudent, grades[];	//Store number of students and their grades accordingly
+	<font color="#0000FF">static int[] bin = new int[10</font><font color="#00FF00">];		//Store the grades in bins of 0 to 9
+	
+	public static void main(String[]</font> args) {
+		
+		readGrades();					//Read the input grades from keyboard
+		computeHistogram();				//Throw the grades into corresponding bins
+		drawHistogram();				//Print out the histogram
+
+	}
+	
+	//Read the input grades from keyboard
+	public static void <font color="#00FF00">readGrades(){
+
+		Scanner in = new Scanner(System</font>.in);	//Declare new Scanner called in
+
+		numStudent = in.<font color="#FF0000">nextInt();		//Scan number of students
+
+		grades = new int[numStudent];	//Declare size to the array grades (equals to number of students)
+
+		//Use for loop to input the grades
+		for (int student = 0; student < numStudent; student++) {
+			
+			grades[student] = in.nextInt(</font>);		//Read the grade for the corresponding student
+			
+			//Enter the next int to the current student if the grade is out of range
+			while (grades[student] > 100 || grades[student] < 0) {
+				grades[student] = in.nextInt();
+			}
+		}
+	}
+	
+	//Throw the grades into corresponding bins
+	public static void <font color="#00FFFF">computeHistogram(){
+
+		//set bin to count grades
+		for (int i=0; i<</font>10; i++){
+			bin[i]=<font color="#00FFFF">0;		//Initialize the bins
+		}
+		
+		//Accumulate the grades into corresponding bins
+		for (int student = 0; student< numStudent; student++){
+			
+			if (grades[student]</font>=<font color="#FF00FF">=100){			//Count grade 100 into bin 9
+				bin[9]++;
+			} else</font> {
+				bin<font color="#0000FF">[(grades[student]/10</font>)] += 1;	//Count the grade according to its value 
+			}
+		}
+	}
+
+	//Print out the histogram
+	public static void <font color="#FF00FF">drawHistogram(){
+
+		for (int i = 0; i <</font> 10; i++){			//A loop to print out histogram for each bin
+			
+			if (i == 9){
+				System.out.printf(" 90 -100: ");
+			} else{
+				System.out.printf("%3d -%3d: ", i*10, i*10<font color="#FFFF00">+9);	
+			}
+			
+			
+			for(int star = 0; star < bin[i]; star++){		//An inner loop to print out the star * in each bin
+				System</font>.out.printf("*");
+			}
+			
+			
+			System.out.println();
+		}
+	}
+}</pre></td><td><pre><font color="#FF0000">import java.util.Scanner;
+
+public </font><font color="#00FF00">class PrintHorizontalHistogram {
+
+	public static void main(String[</font><font color="#00FF00">] args) {
+		
+		Scanner in = new Scanner(System</font>.in);
+		
+		int numGrades = in.nextInt();
+		int inputs[<font color="#FF0000">] = new int[numGrades];
+		
+		for (int i = 0; i < numGrades; i++) {
+			inputs[i] = in.</font><font color="#0000FF">nextInt();
+		}
+		
+		int bins[] = new int [10</font><font color="#00FFFF">];
+		for (int i = 0; i< inputs.length; i++) {
+			if (inputs[i]</font> <font color="#FF00FF">== 100) {
+				bins[9]++;
+			}
+			
+			else</font> if(inputs[i] < 10) {
+				bins[0]++;
+			}
+			
+			else {
+				int index <font color="#0000FF">= inputs[i]/10</font>;
+				bins[index]+<font color="#00FFFF">+;
+			}
+		}
+		
+		for (int i = 0; i <</font> bins.length; i++) {
+			if (i == 0) {
+				System.out.print(<font color="#FFFF00">"  0 -  9: ");
+				for (int star = 0; star < bins[i]; star++) {
+					System</font>.out.print("*");
+				}
+			}
+			
+			else if(i > 0 && i < 9){
+				System.out.print(" " + i + "0 - " + i + <font color="#FF00FF">"9: ");
+				for (int star = 0; star <</font> bins[i]; star++) {
+					System.out.print("*");
+				}
+			}
+			
+			else {
+				System.out.print(" " + i + "0 -100: ");
+				for (int star = 0; star < bins[i]; star++) {
+					System.out.print("*");
+				}
+			}
+			
+			System.out.println();
+		}	
+
+	}
+
+}
+</pre></td></tr></table></body></html>

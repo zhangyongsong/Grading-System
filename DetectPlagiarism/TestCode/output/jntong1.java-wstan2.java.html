@@ -1,0 +1,97 @@
+<html><head><title>jntong1.java VS wstan2.java</title><link rel="stylesheet" type="text/css" href="..\css\style.css"></head><body><pre>jntong1.java VS wstan2.java
+Reserved Comparison Lengths: 71 111 87
+Similarity: 0.64
+All Tokens Comparison Lengths: 97 152 110
+Similarity: 0.638
+
+</pre><table><tr><td><pre><font color="#0000FF">import java.util.Scanner;
+
+public class PrintHorizontalHistogram {
+	public static int[] grades;
+	public </font><font color="#FF00FF">static int[] num = new int [10]</font>;    // to put in 0 - 10 etc
+	
+	public <font color="#00FF00">static void main(String[]</font> args) {
+		readHistogram();
+		calculateHistogram();
+		printHistogram();
+	}
+	
+	public static void <font color="#00FFFF">readHistogram() {
+		Scanner in = new Scanner(System.in);
+		int numStudents = in.</font><font color="#00FF00">nextInt();
+		grades = new int[numStudents];
+		for(int i =0; i<numStudents; i++) {
+			grades[i] = in.nextInt(</font>);
+		}
+	}
+	
+	public static void <font color="#FF0000">calculateHistogram() {
+		for (int i =0; i<grades.length; i++) {
+			if (grades[i] == 100)
+				num[9]++;
+			else
+				num[grades[i]/10]++</font>;
+		}
+	}
+	
+	public static void <font color="#FFFF00">printHistogram() {
+		for(int i=0; i<num.length; i++) {
+			if(i==9)
+				System.out.print(</font>" " + i*10 + " -" + "100: " );
+			else if (i==0)
+				System.out.print("  " + i + " -  " + (num.length-1) + ": ");
+			else
+				System.out.print(" " + i*10 + " - " + (i*10 + 9) + <font color="#FF0000">": ");
+			for (int star =0; star <num[i]; star++) {
+				System.out.print("*");
+			}
+			System.out.println(</font>);
+		}
+	}
+}
+</pre></td><td><pre><font color="#0000FF">import java.util.Scanner;
+
+public class PrintHorizontalHistogram {
+
+	public static int[] grades;
+		
+	public </font><font color="#00FF00">static void main(String[</font><font color="#00FFFF">] args) {
+		
+		Scanner in = new Scanner(System.in);
+		
+		//read line 1: number of students
+		int numStudents = in.nextInt(</font>);
+		
+		//read line 2: the grades
+		int[<font color="#00FF00">] grades =  new int[numStudents];
+		for (int i = 0; i < grades.length; i++){
+			grades[i] = in.</font><font color="#FF00FF">nextInt();
+		}
+		
+		int[] bins = new int[10</font><font color="#FF0000">];
+		for(int i = 0; i < numStudents; i++){
+			if(grades[i] == 100){
+				bins[9]++;
+			}else{
+				bins[grades[i]/10]+</font><font color="#FFFF00">+;
+			}
+		}
+
+	
+
+		for (int bin = 0; bin < bins.length; bin++) {
+			if(bin==9){
+				System.out.print(</font>" 90 -100: ");
+			}else{
+				System.out.printf("%3d -%3d: ", bin*10, bin*10<font color="#FF0000">+9);
+			}
+			for(int star = 0; star < bins[bin]; star++){
+				System.out.print("*");
+			}
+			System.out.println(</font>);
+			
+		}
+		
+	}
+}
+</pre></td></tr></table></body></html>

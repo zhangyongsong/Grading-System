@@ -1,0 +1,113 @@
+<html><head><title>sychua1.java VS wykoh1.java</title><link rel="stylesheet" type="text/css" href="..\css\style.css"></head><body><pre>sychua1.java VS wykoh1.java
+Reserved Comparison Lengths: 62 114 94
+Similarity: 0.544
+All Tokens Comparison Lengths: 80 158 123
+Similarity: 0.506
+
+</pre><table><tr><td><pre><font color="#00FF00">import java.util.Scanner;
+public class PrintHorizonalHistogram {
+	public static void main(String[] args) {
+		int numGrades; 
+			
+		Scanner in = new Scanner(</font><font color="#FF0000">System.in);
+		numGrades = in.nextInt(); // get the number
+		
+		int[] grades = new int[numGrades];
+		
+		//get the grades 
+		for (int i = 0;i<grades.length;i++){
+			grades[i] = in.nextInt();
+		}
+				
+		int[] histogramBin = new int[10];
+		for (int i=0;i<</font><font color="#FF00FF">10;i++){
+			histogramBin[i] = 0</font>;
+		}//initialize
+		
+		<font color="#0000FF">int temp; //store the grades into the bin
+		for (int i=0;i<numGrades;i++</font>){
+			if ( grades[i] == 100 ){
+				histogramBin[9]++;
+			}
+			<font color="#FFFF00">else{
+			temp = grades[i]/</font><font color="#00FFFF">10;
+			histogramBin[temp]++ ;
+			}
+		}
+		
+		//printing out the histogram
+		for(int i=0;i<</font>10;i++){
+			if( i == 9 ){
+				System.out.print(" " + i*10 + " -" + ((i*10) + 10) + ": " );
+			}
+			else{
+				if (i == 0){
+					System.out.print("  " + i*10 + " -  " <font color="#FF0000">+ ((i*10) + 9</font>) + ": " );
+				}
+				else
+					System.out.print(" " + i*10 + " - " + ((i*10) + 9) + ": " );
+			}
+
+			while ( histogramBin[i] != 0 ){
+				System.out.print("*");
+				histogramBin[i]--;
+			}
+			System.out.println();
+		}
+		
+	}
+}
+</pre></td><td><pre><font color="#00FF00">import java.util.Scanner;
+
+public class PrintHorizontalHistogram {
+
+	public static void main(String[] args) {
+		int numberStudents;
+		
+		Scanner in = new Scanner(System</font>.in);
+		System.out.print(<font color="#FF0000">"");
+		numberStudents = in.nextInt();
+		
+		int[] grades = new int[numberStudents];
+		
+		for (int i = 0; i < numberStudents; i++) {
+			grades[i] = in.nextInt();
+		}
+		
+		int[] bins = new int[10];		
+		for (int i = 0; i </font><font color="#FF00FF">< bins.length; i++) {
+			bins[i] = </font><font color="#0000FF">0;
+		}
+		
+		for (int gradeNum = 0; gradeNum < grades.length; gradeNum++</font>) {
+			int binNum;
+			if (grades[gradeNum] < <font color="#FFFF00">100) {
+				binNum = grades[gradeNum]/10</font>;
+			} else {
+				binNum = <font color="#00FFFF">9;
+			}
+			bins[binNum]++;
+			
+		}
+
+		for (int i = 0; i <</font> bins.length; i++) {
+			int lowerbound = i*10;
+			int upperbound <font color="#FF0000">= i*10 + 9</font>;
+			if (i == bins.length - 1) {
+				upperbound = 100;
+			}
+			
+			System.out.printf("%3d -%3d: ", lowerbound, upperbound);
+			
+			int numStars = bins[i];
+			for (int count = 0; count < numStars; count++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+
+		
+	}
+	
+}
+</pre></td></tr></table></body></html>

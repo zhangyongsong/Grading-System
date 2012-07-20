@@ -1,0 +1,81 @@
+<html><head><title>cchan3.java VS jxyap2.java</title><link rel="stylesheet" type="text/css" href="..\css\style.css"></head><body><pre>cchan3.java VS jxyap2.java
+Reserved Comparison Lengths: 41 79 82
+Similarity: 0.5
+All Tokens Comparison Lengths: 60 113 105
+Similarity: 0.531
+
+</pre><table><tr><td><pre><font color="#00FF00">import java.util.Scanner;
+
+public class HorizontalGradeHistogram {
+
+	public static void main(String[]</font> args) {
+		<font color="#00FFFF">int num;
+		Scanner in = new Scanner(</font><font color="#FF0000">System.in);
+
+		num = in.nextInt();
+		int[] values = new int[num];
+
+		for (int i = 0; i < num; i++) {
+			values[i] = in.</font><font color="#FF00FF">nextInt();
+		}
+		
+		for (int i = 0; i<</font>10; i++) {
+			if (i==0)
+				System.out.print("  0 -  9: ");
+			<font color="#FFFF00">else if (i==9)
+				System.out.print(</font>" " + i*10 + " -" + ((i+1)*10) + ": ");
+			else
+				System.out.print(" " + i*10 + " - " + ((i+1)*10-1) + <font color="#0000FF">": ");
+			
+			for (int j=0; j<num; j++) {
+				if ((values[j]</font>/10)==i)
+					System.out.print("*");
+				
+				if ((values[j]==100) && i==<font color="#FF0000">9)
+					System.out.print("*");
+			}
+			
+			System.out.println(</font>);
+		}
+	}
+}</pre></td><td><pre><font color="#00FF00">import java.util.Scanner;
+
+public class PrintHorizontalHistogram {
+
+
+	public static void main (String args[</font><font color="#00FFFF">]){
+
+	Scanner in = new Scanner(System</font>.in);
+
+	<font color="#FF0000">int numOfGrades = in.nextInt();
+	int[] grades = new int[numOfGrades];
+
+		for(int i=0; i<numOfGrades; i++){
+		grades[i]= in.nextInt(</font>);
+	}
+
+	int[] bins = new int[10<font color="#0000FF">];
+	for (int i=0; i<numOfGrades; i++){
+		if(grades[i]</font> == 100){
+			bins[9]++;
+		}else{
+			bins[grades[i]/10]+<font color="#FF00FF">+;
+		}
+	}
+
+	for (int bin = 0; bin <</font>bins.length; bin<font color="#FFFF00">++){
+		if(bin == 9){
+			System.out.print(</font>" 90 -100: ");
+		}else{
+			System.out.printf("%3d -%3d: ", bin*10, bin*10+9);
+		}
+		for(int star = 0; star < bins[bin]; star<font color="#FF0000">++){
+			System.out.print("*");
+		}
+		System.out.println(</font>);
+	}
+
+
+  } // end of main
+
+} // end of class</pre></td></tr></table></body></html>

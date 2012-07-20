@@ -1,0 +1,106 @@
+<html><head><title>jntong1.java VS klneo1.java</title><link rel="stylesheet" type="text/css" href="..\css\style.css"></head><body><pre>jntong1.java VS klneo1.java
+Reserved Comparison Lengths: 61 111 107
+Similarity: 0.55
+All Tokens Comparison Lengths: 86 152 139
+Similarity: 0.566
+
+</pre><table><tr><td><pre><font color="#FF0000">import java.util.Scanner;
+
+public class PrintHorizontalHistogram {
+	public static int[] grades;
+	public static int[] num = new int [10];    // to put in 0 - 10 etc
+	
+	public static </font><font color="#0000FF">void main(String[]</font> args) {
+		readHistogram();
+		calculateHistogram();
+		printHistogram();
+	}
+	
+	public static void <font color="#00FF00">readHistogram() {
+		Scanner in = new Scanner(System.in);
+		int numStudents = in.nextInt();
+		grades = new int[numStudents];
+		for(int i =0; i<numStudents; i++) {
+			grades[i] = in.nextInt();
+		}
+	}
+	
+	public static void</font> <font color="#0000FF">calculateHistogram() {
+		for (int i =0; i<grades.length; i++</font>) {
+			if (grades[i] == 100)
+				num[9]++;
+			else
+				num<font color="#FF00FF">[grades[i]/</font><font color="#FFFF00">10]++;
+		}
+	}
+	
+	public static void</font> <font color="#00FFFF">printHistogram() {
+		for(int i=0; i<num.length; i++</font>) {
+			if(i==9)
+				System.out.print(" " + i*10 + " -" + "100: " );
+			else if (i==0)
+				System.out.print("  " + i + " -  " + (num.length-1) + ": ");
+			else
+				System.out.print(" " + i*10 + " - " + (i*10 + 9) + <font color="#FF0000">": ");
+			for (int star =0; star <</font>num[i<font color="#00FF00">]; star++) {
+				System.out.print("*");
+			}
+			System.out.println(</font>);
+		}
+	}
+}
+</pre></td><td><pre><font color="#FF0000">import java.util.Scanner;
+public class Horizontal {
+     public static int[] grades;
+    public static int[] bins = new int[10];
+    
+    public static void</font> <font color="#00FF00">readGrades(){
+        Scanner in = new Scanner(System.in);
+        int numStudents = in.nextInt();
+        grades = new int[numStudents];
+        for(int i=0; i<grades.length; i++){
+            grades[i] = in.nextInt();
+        }
+    }
+    public static void</font> <font color="#0000FF">computeHistogram(){
+        for(int i=0; i<bins.length; i++</font>){
+            bins[i]=<font color="#00FFFF">0;
+        }
+        for(int gradeNum=0; gradeNum<grades.length; gradeNum++</font>){
+            int binNum;
+            if(grades[gradeNum] < 100){
+                binNum <font color="#FF00FF">= grades[gradeNum]/10</font>;
+            }else{
+                binNum=9;
+            }
+            bins<font color="#FFFF00">[binNum]++; //increment count by this bin
+        }
+    }
+    
+    public static void</font> <font color="#FF0000">printHorizontal(){
+        for(int i=0; i<</font>bins.length; i++){
+            //find the lowerbound and upperbound of each bits
+            int lowerbound = i*10;
+            int upperbound = i*10+9;
+            if(i==bins.length -1){
+                upperbound =100;
+            }
+            //%3d: integer with 3 spaces
+            System.out.printf("%3d -%3d: ", lowerbound, upperbound);
+            
+            int numStars = bins[i];
+            for(int count=0; count <font color="#00FF00">< numStars; count++){
+                System.out.print("*");
+            }
+            System.out.println(</font>);
+        }
+        System.out.println();
+    }
+    
+    public static <font color="#0000FF">void main(String[]</font> args){
+        readGrades();
+        computeHistogram();
+        printHorizontal();
+    }
+}
+</pre></td></tr></table></body></html>

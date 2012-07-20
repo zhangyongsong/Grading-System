@@ -1,0 +1,124 @@
+<html><head><title>nguy0125.java VS thuong1.java</title><link rel="stylesheet" type="text/css" href="..\css\style.css"></head><body><pre>nguy0125.java VS thuong1.java
+Reserved Comparison Lengths: 67 111 92
+Similarity: 0.604
+All Tokens Comparison Lengths: 88 148 118
+Similarity: 0.595
+
+</pre><table><tr><td><pre><font color="#FF00FF">import java.util.Scanner;
+
+public class</font> PrintHorizontalHistogram{	//Saved as PrintHorizontalHistogram.java
+
+	
+	static int numStudent, grades[];	//Store number of students and their grades accordingly
+	<font color="#0000FF">static int[] bin = new int[10</font><font color="#FFFF00">];		//Store the grades in bins of 0 to 9
+	
+	public static void main(String[]</font> args) {
+		
+		readGrades();					//Read the input grades from keyboard
+		computeHistogram();				//Throw the grades into corresponding bins
+		drawHistogram();				//Print out the histogram
+
+	}
+	
+	//Read the input grades from keyboard
+	public static void <font color="#FF0000">readGrades(){
+
+		Scanner in = new Scanner(System.in);	//Declare new Scanner called in
+
+		numStudent = in.nextInt();		//Scan number of students
+
+		grades = new int[numStudent];	//Declare size to the array grades (equals to number of students)
+
+		//Use for loop to input the grades
+		for (int student = 0; student < numStudent; student++) {
+			
+			grades[student] = in.nextInt(</font>);		//Read the grade for the corresponding student
+			
+			//Enter the next int to the current student if the grade is out of range
+			while (grades[student] > 100 || grades[student] < 0) {
+				grades[student] = in.nextInt();
+			}
+		}
+	}
+	
+	//Throw the grades into corresponding bins
+	public static void <font color="#FF0000">computeHistogram(){
+
+		//set bin to count grades
+		for (int i=0; i<</font>10; i++){
+			bin[i]=<font color="#00FFFF">0;		//Initialize the bins
+		}
+		
+		//Accumulate the grades into corresponding bins
+		for (int student = 0; student<</font> numStudent; student++){
+			
+			if (grades[student]==<font color="#0000FF">100){			//Count grade 100 into bin 9
+				bin[9]++</font>;
+			} else {
+				bin<font color="#00FF00">[(grades[student]/10</font>)] += 1;	//Count the grade according to its value 
+			}
+		}
+	}
+
+	//Print out the histogram
+	public static void <font color="#00FFFF">drawHistogram(){
+
+		for (int i = 0; i < 10; i++){			//A loop to print out histogram for each bin
+			
+			if (i ==</font> 9){
+				System.out.printf(<font color="#00FF00">" 90 -100: ");
+			} else{
+				System.out.printf("%3d -%3d: ", i*10, i*10+9);	
+			}
+			
+			
+			for(int star = 0; star < bin[i]; star++){		//An inner loop to print out the star * in each bin
+				System</font>.out.printf("*");
+			}
+			
+			
+			System.out.println();
+		}
+	}
+}</pre></td><td><pre><font color="#FF00FF">import java.util.Scanner;
+public </font><font color="#FFFF00">class PrintHorizontalHistogram {
+
+		public static void main(String[]</font> args) {
+		int[] grades;
+		<font color="#0000FF">int numSt,num;
+		int[] bins=new int[10</font><font color="#FF0000">];
+		
+		Scanner in=new Scanner(System.in);
+		numSt=in.nextInt();//read number of students
+		grades=new int[numSt];
+		for(int i=0;i<numSt;i++){
+			grades[i]=in.</font><font color="#FF0000">nextInt();//read grades
+		}
+		//collect histogram bins
+		for(int i=0;i<</font>numSt;i++){
+			num<font color="#00FF00">=grades[i] / </font><font color="#00FFFF">10;//check the range
+			for(int j=0;j<10;j++){
+				if (num==</font>j) bins[j]++;//collect the bins
+			}
+			if(num==<font color="#0000FF">10) bins[9]+</font><font color="#00FFFF">+;//for 100
+		}
+		
+		//print the histogram
+		for(int line=0;line<</font>10;line++){
+			if(line==9){
+				System.out.printf("%3d -%3d: ",line*10,(line*10<font color="#00FF00">+10));//print the last line
+			}else{
+			System.out.printf("%3d -%3d: ",line*10,(line*10+9));//print rest head lines
+			}
+			
+			for(int bin=0;bin<bins[line];bin++){//print bins
+				System</font>.out.print("*");
+		    }
+			System.out.println();
+		}
+		
+
+	}
+
+}
+</pre></td></tr></table></body></html>

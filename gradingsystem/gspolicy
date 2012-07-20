@@ -1,0 +1,9 @@
+/* AUTOMATICALLY GENERATED ON Fri Sep 09 10:54:36 CST 2011*/
+/* Used for Grading System uploaded code execution */
+
+grant codeBase "file:/E:/Program Files/WampServer/gradingsystem/uploads/-" {
+  permission java.io.FilePermission "E:/Program Files/WampServer/gradingsystem/stdin/-", "read";
+  permission java.util.PropertyPermission "\"java.*\"", "read";
+  permission java.lang.RuntimePermission "stopThread";
+};
+

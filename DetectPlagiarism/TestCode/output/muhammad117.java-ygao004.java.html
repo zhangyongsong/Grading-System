@@ -1,0 +1,171 @@
+<html><head><title>muhammad117.java VS ygao004.java</title><link rel="stylesheet" type="text/css" href="..\css\style.css"></head><body><pre>muhammad117.java VS ygao004.java
+Reserved Comparison Lengths: 96 204 239
+Similarity: 0.402
+All Tokens Comparison Lengths: 146 246 338
+Similarity: 0.432
+
+</pre><table><tr><td><pre>import java.util.<font color="#FF0000">*;
+
+public class H_Histogram {
+
+	public static void main(String[] args) {
+			int n;
+			int []</font> grades;
+			int [] array = new int[10];
+			
+			String [] labels = {"  0 -  9: ", " 10 - 19: "," 20 - 29: "," 30 - 39: "," 40 - 49: "," 50 - 59: "," 60 - 69: "," 70 - 79: "," 80 - 89: ",<font color="#00FF00">" 90 -100: "};
+			
+			Scanner scan = new Scanner(System.in);
+			
+			n = scan.nextInt();
+			
+			grades = new int[n</font><font color="#00FFFF">];
+			
+			for (int i=0; i < n; i</font><font color="#FFFF00">++){
+				grades[i] = scan.</font><font color="#FF0000">nextInt();
+			}
+			
+			for (int i=0; i <</font> 10; i++){
+				array[i<font color="#0000FF">] = 0;
+			}
+			
+			for (int i=0; i < n; i</font><font color="#FF0000">++){
+				if(grades[i] <10</font>) array[0<font color="#00FF00">]++;
+				if(grades[i]</font> >= 10 && grades[i] <20) array[1<font color="#00FFFF">]++;
+				if(grades[i]</font> <font color="#0000FF">>= 20 && grades[i]</font> <30) array[2<font color="#FFFF00">]++;
+				if(grades[i]</font> <font color="#FF00FF">>= 30 && grades[i]</font> <40) array[3<font color="#00FF00">]++;
+				if(grades[i]</font> <font color="#FF0000">>= 40 && grades[i]</font> <50) array[4<font color="#00FFFF">]++;
+				if(grades[i]</font> <font color="#0000FF">>= 50 && grades[i]</font> <60) array[5<font color="#00FF00">]++;
+				if(grades[i]</font> <font color="#FF00FF">>= 60 && grades[i]</font> <70) array[6<font color="#FFFF00">]++;
+				if(grades[i]</font> <font color="#FF0000">>= 70 && grades[i]</font> <80) array[7<font color="#00FFFF">]++;
+				if(grades[i]</font> <font color="#0000FF">>= 80 && grades[i]</font> <90) array[8<font color="#FFFF00">]++;
+				if(grades[i]</font> <font color="#FF00FF">>= 90 && grades[i]</font> <=100) array[9]+<font color="#00FF00">+;
+			}
+			
+			for (int i=0; i <</font> 10; i++){
+				System.out.print(labels[i<font color="#0000FF">]);
+				for (int x = 0; x <</font> array[i<font color="#FF00FF">]; x++){
+					System.out.print("*");
+				}
+				System.out.println(</font>); 
+			} 
+					
+	}
+
+}
+</pre></td><td><pre>/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author ygao004
+ */
+import java.util.<font color="#FF0000">Scanner;
+public class PrintHorizontalHistogram {
+
+    /**
+     * @param args the command line arguments
+     */
+   
+    public static void main(String[] args) {
+        
+        // TODO code application logic here
+    int number;
+    int[</font><font color="#00FF00">] grades;
+    Scanner in=new Scanner(System.in);
+    number=in.nextInt();
+    grades=new int[number]</font>;
+    int num0to10=0;
+    int num10to20=0;
+    int num20to30=0;
+    int num30to40=0;
+    int num40to50=0;
+    int num50to60=0;
+    int num60to70=0;
+    int num70to80=0;
+    int num80to90=0;
+    <font color="#0000FF">int num90to100=0;
+    for(int i=0;i<number;i</font><font color="#FFFF00">++)
+        {
+            grades[i]=in.</font><font color="#FF0000">nextInt();
+            if (grades[i]<10</font>&&grades[i]>=<font color="#00FF00">0)
+                num0to10++;
+            if(grades[i]</font><font color="#0000FF"><20&&grades[i]</font>>=<font color="#00FFFF">10)
+                num10to20++;
+            if(grades[i]</font><font color="#FF00FF"><30&&grades[i]</font>>=<font color="#FFFF00">20)
+                num20to30++;
+            if(grades[i]</font><font color="#FF0000"><40&&grades[i]</font>>=<font color="#00FF00">30)
+                num30to40++;
+            if(grades[i]</font><font color="#0000FF"><50&&grades[i]</font>>=<font color="#00FFFF">40)
+                num40to50++;
+            if(grades[i]</font><font color="#FF00FF"><60&&grades[i]</font>>=<font color="#FFFF00">50)
+                num50to60++;
+            if(grades[i]</font><font color="#FF0000"><70&&grades[i]</font>>=<font color="#00FF00">60)
+                num60to70++;
+            if(grades[i]</font><font color="#0000FF"><80&&grades[i]</font>>=<font color="#00FFFF">70)
+                num70to80++;
+            if(grades[i]</font><font color="#FF00FF"><90&&grades[i]</font>>=<font color="#FFFF00">80)
+                num80to90++;
+            if(grades[i]</font><=100&&grades[i]>=90)
+                num90to100++;
+            
+        }
+
+    
+    System.out.print(<font color="#00FFFF">"  0 -  9: ");
+    for (int i=0;i<num0to10;i++</font>)
+        System.out.print("*");
+    System.out.println();
+    
+    System.out.print(<font color="#FF0000">" 10 - 19: ");
+    for (int i=0;i</font><font color="#FF00FF"><num10to20;i++)
+        System.out.print("*");
+    System.out.println(</font>);
+    
+    System.out.print(<font color="#00FF00">" 20 - 29: ");
+    for (int i=0;i<</font>num20to30;i++)
+        System.out.print("*");
+    System.out.println();
+    
+    System.out.print(<font color="#0000FF">" 30 - 39: ");
+    for (int i=0;i<</font>num30to40;i++)
+        System.out.print("*");
+    System.out.println();
+    
+    System.out.print(" 40 - 49: ");
+    for (int i=0;i<num40to50;i++)
+        System.out.print("*");
+    System.out.println();
+    
+    System.out.print(" 50 - 59: ");
+    for (int i=0;i<num50to60;i++)
+        System.out.print("*");
+    System.out.println();
+    
+    System.out.print(" 60 - 69: ");
+    for (int i=0;i<num60to70;i++)
+        System.out.print("*");
+    System.out.println();
+    
+    System.out.print(" 70 - 79: ");
+    for (int i=0;i<num70to80;i++)
+        System.out.print("*");
+    System.out.println();
+    
+    System.out.print(" 80 - 89: ");
+    for (int i=0;i<num80to90;i++)
+        System.out.print("*");
+    System.out.println();
+    
+    System.out.print(" 90 -100: ");
+    for (int i=0;i<num90to100;i++)
+        System.out.print("*");
+    System.out.println();
+    
+   
+    
+    }
+}
+</pre></td></tr></table></body></html>

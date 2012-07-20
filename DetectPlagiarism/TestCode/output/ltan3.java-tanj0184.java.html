@@ -1,0 +1,194 @@
+<html><head><title>ltan3.java VS tanj0184.java</title><link rel="stylesheet" type="text/css" href="..\css\style.css"></head><body><pre>ltan3.java VS tanj0184.java
+Reserved Comparison Lengths: 137 199 188
+Similarity: 0.688
+All Tokens Comparison Lengths: 255 295 287
+Similarity: 0.864
+
+</pre><table><tr><td><pre><font color="#FF0000">import java.util.Scanner;
+
+public class PrintHorziontalHistogram {
+	public static void main(String[] args) {
+		
+		Scanner in = new Scanner(System.in);
+		
+		int numGrades = in.nextInt();
+		int grades[] = new int[numGrades];
+		
+		for (int i = 0; i<numGrades; i++){
+			grades[i] = in.nextInt();
+		}
+		
+		System.out.print("  0 -  9: ");
+		for (int j = 0; j < numGrades; j++){
+			if(grades[j]</font>><font color="#FF00FF">=0 && grades[j]</font><<font color="#00FF00">10){
+				System.out.print("*");
+			}
+		}
+		
+		System.out.println("");
+		
+		System.out.print(" 10 - 19: ");
+		for (int j = 0; j < numGrades; j++){
+			if(grades[j]</font>><font color="#FFFF00">=10 && grades[j]</font><<font color="#0000FF">20){
+				System.out.print("*");
+			}
+		}
+		System.out.println("");
+		
+		System.out.print(" 20 - 29: ");
+		for (int j = 0; j < numGrades; j++){
+			if(grades[j]</font>><font color="#FF0000">=20 && grades[j]</font><<font color="#00FFFF">30){
+				System.out.print("*");
+			}
+		}
+		System.out.println("");
+		
+		System.out.print(" 30 - 39: ");
+		for (int j = 0; j < numGrades; j++){
+			if(grades[j]</font>><font color="#00FF00">=30 && grades[j]</font><<font color="#FF00FF">40){
+				System.out.print("*");
+			}
+		}
+		System.out.println("");
+		
+		System.out.print(" 40 - 49: ");
+		for (int j = 0; j < numGrades; j++){
+			if(grades[j]</font>><font color="#0000FF">=40 && grades[j]</font><<font color="#FFFF00">50){
+				System.out.print("*");
+			}
+		}
+		System.out.println("");
+		
+		System.out.print(" 50 - 59: ");
+		for (int j = 0; j < numGrades; j++){
+			if(grades[j]</font>><font color="#00FFFF">=50 && grades[j]</font><<font color="#FF0000">60){
+				System.out.print("*");
+			}
+		}
+		System.out.println("");
+		
+		System.out.print(" 60 - 69: ");
+		for (int j = 0; j < numGrades; j++){
+			if(grades[j]</font>><font color="#FF00FF">=60 && grades[j]</font><<font color="#00FF00">70){
+				System.out.print("*");
+			}
+		}
+		System.out.println("");
+		
+		System.out.print(" 70 - 79: ");
+		for (int j = 0; j < numGrades; j++){
+			if(grades[j]</font>><font color="#FFFF00">=70 && grades[j]</font><<font color="#0000FF">80){
+				System.out.print("*");
+			}
+		}
+		System.out.println("");
+		
+		System.out.print(" 80 - 89: ");
+		for (int j = 0; j < numGrades; j++){
+			if(grades[j]</font>><font color="#FF0000">=80 && grades[j]</font><<font color="#00FFFF">90){
+				System.out.print("*");
+			}
+		}
+		System.out.println("");
+		
+		System.out.print(" 90 -100: ");
+		for (int j = 0; j < numGrades; j++){
+			if(grades[j]</font>><font color="#00FF00">=90 && grades[j]</font><<font color="#0000FF">=100){
+				System.out.print("*"</font>);
+			}
+		}
+
+	}
+
+}
+</pre></td><td><pre><font color="#FF0000">import java.util.Scanner;
+
+public class Horizontalhisto {
+	
+	public static void main(String[] args) {
+	
+		Scanner in = new Scanner(System.in);
+		
+		
+	int numGrades = in.nextInt();
+	int[] Grades = new int[numGrades];
+	
+	for(int i =0; i< numGrades; i++)
+	{ Grades[i] = in.nextInt();
+	}
+	
+	System.out.print("  0 -  9: ");
+	for(int i = 0; i<numGrades; i++)
+	{ if(Grades[i]</font> <font color="#FF00FF">>= 0 && Grades[i]</font> <= <font color="#00FF00">9)
+		System.out.print("*");
+	}
+	System.out.println("");
+	
+	System.out.print(" 10 - 19: ");
+	for(int i = 0; i<numGrades; i++)
+	{ if(Grades[i]</font> <font color="#FFFF00">>= 10 && Grades[i]</font> <= <font color="#0000FF">19)
+		System.out.print("*");
+	}
+	System.out.println("");
+	
+	System.out.print(" 20 - 29: ");
+	for(int i = 0; i<numGrades; i++)
+	{ if(Grades[i]</font> <font color="#FF0000">>= 20 && Grades[i]</font> <= <font color="#00FFFF">29)
+		System.out.print("*");
+	}
+	System.out.println("");
+	
+	System.out.print(" 30 - 39: ");
+	for(int i = 0; i<numGrades; i++)
+	{ if(Grades[i]</font> <font color="#00FF00">>= 30 && Grades[i]</font> <= <font color="#FF00FF">39)
+		System.out.print("*");
+	}
+	System.out.println("");
+	
+	System.out.print(" 40 - 49: ");
+	for(int i = 0; i<numGrades; i++)
+	{ if(Grades[i]</font> <font color="#0000FF">>= 40 && Grades[i]</font> <= <font color="#FFFF00">49)
+		System.out.print("*");
+	}
+	System.out.println("");
+	
+	System.out.print(" 50 - 59: ");
+	for(int i = 0; i<numGrades; i++)
+	{ if(Grades[i]</font> <font color="#00FFFF">>= 50 && Grades[i]</font> <= <font color="#FF0000">59)
+		System.out.print("*");
+	}
+	System.out.println("");
+	
+	System.out.print(" 60 - 69: ");
+	for(int i = 0; i<numGrades; i++)
+	{ if(Grades[i]</font> <font color="#FF00FF">>= 60 && Grades[i]</font> <= <font color="#00FF00">69)
+		System.out.print("*");
+	}
+	System.out.println("");
+	
+	System.out.print(" 70 - 79: ");
+	for(int i = 0; i<numGrades; i++)
+	{ if(Grades[i]</font> <font color="#FFFF00">>= 70 && Grades[i]</font> <= <font color="#0000FF">79)
+		System.out.print("*");
+	}
+	System.out.println("");
+	
+	System.out.print(" 80 - 89: ");
+	for(int i = 0; i<numGrades; i++)
+	{ if(Grades[i]</font> <font color="#FF0000">>= 80 && Grades[i]</font> <= <font color="#00FFFF">89)
+		System.out.print("*");
+	}
+	System.out.println("");
+	
+	System.out.print(" 90 -100: ");
+	for(int i = 0; i<numGrades; i++)
+	{ if(Grades[i]</font> <font color="#00FF00">>= 90 && Grades[i]</font> <font color="#0000FF"><= 100)
+		System.out.print("*"</font>);
+	}
+	System.out.println("");
+	
+	}
+	
+
+}
+</pre></td></tr></table></body></html>

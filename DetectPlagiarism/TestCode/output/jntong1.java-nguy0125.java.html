@@ -1,0 +1,128 @@
+<html><head><title>jntong1.java VS nguy0125.java</title><link rel="stylesheet" type="text/css" href="..\css\style.css"></head><body><pre>jntong1.java VS nguy0125.java
+Reserved Comparison Lengths: 69 111 111
+Similarity: 0.622
+All Tokens Comparison Lengths: 88 152 148
+Similarity: 0.579
+
+</pre><table><tr><td><pre><font color="#FFFF00">import java.util.Scanner;
+
+public class</font> PrintHorizontalHistogram {
+	<font color="#FF0000">public static int[]</font> grades;
+	<font color="#FF0000">public static int[] num = new int [10];    // to put in 0 - 10 etc
+	
+	public static void main(String[]</font> args) {
+		readHistogram();
+		calculateHistogram();
+		printHistogram();
+	}
+	
+	public static void <font color="#00FF00">readHistogram() {
+		Scanner in = new Scanner(System</font>.in);
+		<font color="#00FF00">int numStudents = in.nextInt();
+		grades = new int[numStudents];
+		for(int i =0; i<numStudents; i++) {
+			grades[i] = in.nextInt(</font>);
+		}
+	}
+	
+	public static void <font color="#00FFFF">calculateHistogram() {
+		for (int i =0; i<grades.length; i++) {
+			if (grades[i]</font> <font color="#0000FF">== 100)
+				num[9]++;
+			else
+				num[grades[i]/10]</font>++;
+		}
+	}
+	
+	public static void <font color="#0000FF">printHistogram() {
+		for(int i=0; i</font><font color="#00FFFF"><num.length; i++) {
+			if(i==9)
+				System</font>.out.print(" " + i*10 + " -" + "100: " );
+			else if (i==0)
+				System.out.print("  " + i + " -  " + (num.length-1) + ": ");
+			else
+				System.out.print(" " + i*10 + " - " + (i*10 + 9) + <font color="#FF00FF">": ");
+			for (int star =0; star <num[i]; star++) {
+				System</font>.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+}
+</pre></td><td><pre><font color="#FFFF00">import java.util.Scanner;
+
+public </font><font color="#FF0000">class PrintHorizontalHistogram{	//Saved as PrintHorizontalHistogram.java
+
+	
+	static int numStudent, grades[</font><font color="#FF0000">];	//Store number of students and their grades accordingly
+	static int[] bin = new int[10];		//Store the grades in bins of 0 to 9
+	
+	public static void main(String[]</font> args) {
+		
+		readGrades();					//Read the input grades from keyboard
+		computeHistogram();				//Throw the grades into corresponding bins
+		drawHistogram();				//Print out the histogram
+
+	}
+	
+	//Read the input grades from keyboard
+	public static void <font color="#00FF00">readGrades(){
+
+		Scanner in = new Scanner(</font><font color="#00FF00">System.in);	//Declare new Scanner called in
+
+		numStudent = in.nextInt();		//Scan number of students
+
+		grades = new int[numStudent];	//Declare size to the array grades (equals to number of students)
+
+		//Use for loop to input the grades
+		for (int student = 0; student < numStudent; student++) {
+			
+			grades[student] = in.nextInt(</font>);		//Read the grade for the corresponding student
+			
+			//Enter the next int to the current student if the grade is out of range
+			while (grades[student] > 100 || grades[student] < 0) {
+				grades[student] = in.nextInt();
+			}
+		}
+	}
+	
+	//Throw the grades into corresponding bins
+	public static void <font color="#0000FF">computeHistogram(){
+
+		//set bin to count grades
+		for (int i=0; i<</font>10; i++){
+			bin[i]=<font color="#00FFFF">0;		//Initialize the bins
+		}
+		
+		//Accumulate the grades into corresponding bins
+		for (int student = 0; student< numStudent; student++){
+			
+			if (grades[student]</font>=<font color="#0000FF">=100){			//Count grade 100 into bin 9
+				bin[9]++;
+			} else {
+				bin[(grades[student]/10)]</font> += 1;	//Count the grade according to its value 
+			}
+		}
+	}
+
+	//Print out the histogram
+	public static void drawHistogram(){
+
+		for (int i = 0; i < <font color="#00FFFF">10; i++){			//A loop to print out histogram for each bin
+			
+			if (i == 9){
+				System</font>.out.printf(" 90 -100: ");
+			} else{
+				System.out.printf("%3d -%3d: ", i*10, i*10<font color="#FF00FF">+9);	
+			}
+			
+			
+			for(int star = 0; star < bin[i]; star++){		//An inner loop to print out the star * in each bin
+				System</font>.out.printf("*");
+			}
+			
+			
+			System.out.println();
+		}
+	}
+}</pre></td></tr></table></body></html>

@@ -1,0 +1,86 @@
+<html><head><title>cchan3.java VS wstan2.java</title><link rel="stylesheet" type="text/css" href="..\css\style.css"></head><body><pre>cchan3.java VS wstan2.java
+Reserved Comparison Lengths: 38 79 87
+Similarity: 0.437
+All Tokens Comparison Lengths: 60 113 110
+Similarity: 0.531
+
+</pre><table><tr><td><pre><font color="#0000FF">import java.util.Scanner;
+
+public class HorizontalGradeHistogram {
+
+	public </font><font color="#00FFFF">static void main(String[]</font> args) {
+		<font color="#FF00FF">int num;
+		Scanner in = new Scanner(</font><font color="#FF0000">System.in);
+
+		num = in.nextInt();
+		int[] values = new int[num];
+
+		for (int i = 0; i < num; i++) {
+			values[i] = in.</font><font color="#FFFF00">nextInt();
+		}
+		
+		for (int i = 0; i<</font>10; i++) {
+			if (i==0)
+				System.out.print("  0 -  9: ");
+			<font color="#FF0000">else if (i==9)
+				System.out.print(</font>" " + i*10 + " -" + ((i+1)*10) + ": ");
+			else
+				System.out.print(" " + i*10 + " - " + ((i+1)*10-1) + <font color="#00FF00">": ");
+			
+			for (int j=0; j<num; j++) {
+				if ((values[j]</font>/10)==i)
+					System.out.print("*");
+				
+				if ((values[j]==100) && i==<font color="#00FF00">9)
+					System.out.print("*");
+			}
+			
+			System.out.println(</font>);
+		}
+	}
+}</pre></td><td><pre><font color="#0000FF">import java.util.Scanner;
+
+public class PrintHorizontalHistogram {
+
+	public static</font> int[] grades;
+		
+	public <font color="#00FFFF">static void main(String[</font><font color="#FF00FF">] args) {
+		
+		Scanner in = new Scanner(System</font>.in);
+		
+		//read line 1: number of students
+		<font color="#FF0000">int numStudents = in.nextInt();
+		
+		//read line 2: the grades
+		int[] grades =  new int[numStudents];
+		for (int i = 0; i < grades.length; i++){
+			grades[i] = in.nextInt(</font>);
+		}
+		
+		int[] bins = new int[10<font color="#00FF00">];
+		for(int i = 0; i < numStudents; i++){
+			if(grades[i]</font> == 100){
+				bins[9]++;
+			}else{
+				bins[grades[i]/10]+<font color="#FFFF00">+;
+			}
+		}
+
+	
+
+		for (int bin = 0; bin <</font> bins.length; bin<font color="#FF0000">++) {
+			if(bin==9){
+				System.out.print(</font>" 90 -100: ");
+			}else{
+				System.out.printf("%3d -%3d: ", bin*10, bin*10+9);
+			}
+			for(int star = 0; star < bins[bin]; star<font color="#00FF00">++){
+				System.out.print("*");
+			}
+			System.out.println(</font>);
+			
+		}
+		
+	}
+}
+</pre></td></tr></table></body></html>
