@@ -1,0 +1,170 @@
+#Tutorial:
+1
+#Problem Number:
+1001
+#Title: 
+Read all 5 input. Output their sum and average
+#Language: 
+nimei
+#Brief Description: 
+compute sum and average
+#Full Description: 
+There are 5 int input. 
+The student need to read all 5 input, and output their sum as well as their average.
+Each output should occupy one line.
+#Input Description: 
+5 int input.
+#Output Description: 
+First line should be sum of the 5 input int.
+Second line should be average of the 5 input int.
+#Sample Input: 
+1
+2
+3
+4
+5
+#Sample Output:
+15
+3.0
+#Hint: 
+Use scanner class to process input. Be carefull of output style.
+#Test Case:
+#Test Input: 
+6
+7
+8
+9
+10
+#Test Output:
+40
+8.0
+#Test Case:
+#Test Input: 
+-9
+-7
+11
+56
+90
+#Test Output:
+141
+28.2
+#Test Case:
+#Test Input:
+-89
+-54
+30
+23
+-14
+#Test Output:
+-104
+-20.8
+#End
+
+#Tutorial:
+2
+#Problem Number:
+2001
+#Title: 
+Test
+#Language: 
+C++
+#Brief Description: 
+tsdg
+#Full Description: 
+
+#Input Description: 
+5 int input.
+#Output Description: 
+
+#Sample Input: 
+1
+2
+
+#Sample Output:
+15
+3.0
+op;
+#Hint: 
+Use scanner class to process input. Be carefull of output style.
+#Test Case:
+#Test Input: 
+6
+8
+9
+10
+#Test Output:
+40
+8.0
+;:'p
+#Test Case:
+#Test Input: 
+-9
+-7
+11
+90
+#Test Output:
+141
+28.2rrr
+#Test Case:
+#Test Input:
+-89
+-54
+
+\\
+#Test Output:
+-104
+]]
+-20.8
+#End
+
+#Tutorial:
+1
+#Problem Number:
+1003
+#Title: 
+1003 Read all 5 idfsut their sum and average
+#Language: 
+Java
+#Brief Description: 
+compute sum and average
+#Full Description: 
+There are 5 int input. 
+The student need to read all 5 input, and output their sum as well as their average.
+Each output should occupy one line.
+#Input Description: 
+5 int input.
+#Output Description: 
+First line should be sum of the 5 input int.
+Second line should be average of the 5 input int.
+#Sample Input: 
+1
+2
+3
+;
+4\\\
+5
+#Sample Output:
+15
+3.0
+#Hint: 
+Use scanner class to process input. Be carefull of output style.
+#Test Case:
+#Test Input: 
+-9
+-7
+11
+90
+#Test Output:
+141
+28.2rrr
+#Test Case:
+#Test Input:
+-89
+-54
+
+\\
+#Test Output:
+-104
+]]
+-20.8
+#End

@@ -1,0 +1,384 @@
+/* CSS Document */
+
+body { 
+	font-family:Arial, Helvetica, sans-serif;
+	text-align:center;
+	padding-top: 0px;
+	/*background-color:#ADADAD;*/
+}
+
+
+#container { 	
+				width: 1080px;
+				min-height: 600;
+				height: auto;
+				margin-left: auto;
+				margin-right:auto;
+				margin-top: 0px;
+				padding:0;
+				border:0;
+				
+				position: relative;
+				/*background-color:#e2f6ff;*/
+}
+
+#footer {
+			clear: both;
+			border-top:3px solid #B7C1C4;
+			padding:8px 0 17px 0;
+			width: 1080px;
+			text-align:center;
+			margin-left: auto;
+			margin-right: auto;
+			font-size:14px;
+			color:#323232	
+}
+#footer a{
+		color:#323232;
+		text-decoration:none;
+		margin:0 3px;
+}
+#footer .terms{
+	color:#0283DD
+}
+#footer p{
+	padding:5px 0 0 0
+}
+
+
+
+#header { 
+		  height: 100px;
+		  margin-top: 0; 
+		  margin-bottom:0;
+		  border-bottom:3px solid #B7C1C4;
+		  padding: 2px 3px 2px 3px; 
+		  background-color:#FFFFFF;
+		   
+}
+
+
+#header img {border:0;
+			 margin-left: 0; margin-right:0; 
+			 margin-top: 0; margin-bottom:0;
+			 height:100px;
+			 float:left;
+}
+
+#header h1 {border:0;
+		   margin-left:0; 
+		   margin-top:0.4em;
+		   margin-bottom: 0.0em;
+		   float:left; 
+		   font-family:Tahoma, Geneva, sans-serif;
+		   font-size:3.0em;
+		   font-weight:bold;
+}
+#header p {  border: 0;
+			margin-right: 0;
+			margin-top: 0;
+			margin-bottom: 2.0em;
+			float: right;
+			font-family: Tahoma, Geneva, sans-serif;
+			font-size: 0.8em;
+			text-align: right;
+}
+
+#header table#message {
+			padding:0;
+			border:0;
+			margin:0;
+			float: right;
+}
+
+#header table#message tr th{
+			margin-right: 0;
+			margin-top: 0;
+			text-align: right;
+			padding-top: 3em;
+			padding-left: 1em;
+}
+
+#header table#message tr th a:link, #header table#message tr th a:visited{	
+				display: block;
+				color: #0075a2;
+				text-decoration:none;
+}
+
+#header table#message tr th a:hover{
+				background-color: #69f;
+				color: #fff;
+}
+
+#header table#message  tr td{
+			margin-right: 0;
+			margin-top: 0;
+			font-family: Tahoma, Geneva, sans-serif;
+			font-size: 14px;
+			text-align: right;
+}
+
+
+.blocks{
+	width:218px;
+	background-image:url(images/bg.gif);
+	background-position:top left;
+	background-repeat:repeat-y;
+	margin:0 0 2px 0
+}
+
+#menu    {
+		  position:relative;
+		  top:0;
+		  float:left;
+		  font-family: Arial, Helvetica, sans-serif;
+		  font-size: 1.2em;
+		  font-weight:bold;
+		  padding-top: 1em;
+		  margin-left: 0;
+		  margin-right: 0; 
+		  margin-top: 0;
+		  margin-bottom: 0;
+		  padding-left:0;
+		  padding-right: 0;
+		  color: #333;
+		  width: 218px;
+		  height: auto;
+		  
+		  /*border: 1px solid black;*/
+}
+
+#content {
+		  float: right;
+		  width: 840px;
+		  height: auto;
+		  min-height: 450px;
+		  margin-top: 0;
+		  margin-bottom: 0;
+		  margin-left:0;
+   		  margin-right: 0;
+		  padding-left:1em;
+		  padding-bottom:2em;
+		  position:relative;
+		  top: 0;
+		  text-align:left;
+		  color: #3C3C3C;
+		  
+		  /*border-left:3px solid #B7C1C4;*/
+}	
+		
+.clearfix {
+	content:".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility:hidden;
+}
+		
+
+#menu ul {   list-style:none;
+			 padding:0;
+			 margin:0;
+			 border:0;
+			 height: 420px;
+}
+
+#menu ul li{  	margin:0.5em;
+			padding: 1px 5px 1px 5px;
+}
+
+#menu ul li a:link, #menu ul li a:visited{	
+				display: block;
+				color: #0075a2;
+				text-decoration:none;
+				width: 8em;
+				padding: 2px 5px 2px 5px;
+}
+
+html>body #menu ul li a{
+				width: auto;
+}
+
+#menu ul li a:hover{
+				background-color: #69f;
+				color: #fff;
+				padding: 2px 5px 2px 5px;
+}
+				
+
+
+#content form {width: 80%;
+			   margin-top: 1em;
+			   padding-top: 1em; 
+			   padding-bottom:1em;
+			   padding-left:1em;
+}
+
+
+#content form#loginForm{
+			   margin-left:50%;
+			   width: 17em;
+			   margin-top: 100px;
+			   margin-bottom:120px;
+			   padding-top: 1em; 
+			   padding-bottom:1em;
+			   padding-right:1em;
+			   margin-left: 55%;
+			   background-color: #DDDDDD;
+}
+
+#content form#loginForm input{ width: 10em;
+							   height: 1.5em;
+}
+
+#content form#loginForm input#button{width: 6em;
+							        height: 2em;
+									margin-top: 1em;
+									margin-bottom:1em;
+									float:right;
+}
+
+
+#content form#loginForm a{
+						font-size: 0.8em;
+						margin-top: 0;
+						margin-bottom:0;
+						float:right;
+}
+
+#content form#loginForm span{
+						font-size: 0.9em;
+						margin-top: 0;
+						margin-bottom:0;
+}
+
+#content h2.welcome{
+		margin-left: 2em;
+}
+
+#content table#info{width: 60%;
+					background-color: #CCDDEE;
+					font-size: 20px;
+					margin-left: 2em;
+}
+
+#content table#info tr td {text-align:left;
+						   padding-left: 1em;
+						   padding-top:1em;
+						   border:  3px;
+						   vertical-align:text-top;
+}
+
+#content table#info tr td ul {
+				list-style-type:none;
+				margin-left: 0;
+				padding-left:0;
+}
+
+#content table#info tr td ul li {
+				 				  padding-bottom:1em;
+								  
+}
+
+
+#content p.Title {
+		margin-left: 10%;
+		font-weight:bold;
+		font-size:20px;
+		font-family:Arial, Helvetica, sans-serif;
+}
+
+#content ul#subHeading{
+				list-style-type:none;
+				margin-left: 0;	
+}
+
+#content ul#subHeading li{
+							margin-left:0;
+							padding-top: 0.5em;
+							padding-bottom:0.5em;
+							font-weight: 600;
+							font-size: 18px;
+							color:0077AA;
+}
+
+#content pre.wrap {
+	white-space: pre-wrap;       /* css-3 */
+	white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+	white-space: -pre-wrap;      /* Opera 4-6 */
+	white-space: -o-pre-wrap;    /* Opera 7 */
+	word-wrap: break-word;       /* Internet Explorer 5.5+ */
+	padding-left:20px;
+    font-weight: normal;
+	font-family: "Courier New", monospace;
+	font-size: 15px;
+	color:black;
+}
+
+#content form#selectCourse, #content form#selectFile
+			  {width: 100%;
+			   margin-top: 1em;
+			   padding-top: 0; 
+			   padding-bottom:0;
+			   padding-left:1.5em;
+}
+
+				
+#content table.result {
+						margin-top: 1em;
+						margin-bottom: 1em;
+						margin-left: 0;
+						padding-right: 2em;
+						width: 800px;
+
+}
+#content table.result th{
+						border: 1px ;
+						background-color:#AADDFC;	
+						padding:0.5em 0.8em;
+						
+}
+
+#content table.result td   {
+							border: 1px;
+							background-color:#CCDDEE;
+							width: auto;
+							padding:0.5em 0.8em;
+							text-align:center;
+}
+
+
+#content table#tblProblem{background-color: CCDDFF;	
+						  width: 810px;
+						  margin-top: 1em;
+						  margin-bottom:1em;
+						  margin-left: 0;
+						  margin-right:0;
+						  padding-left:0;
+						  padding-bottom: 1em;
+}
+
+
+#content table#tblProblem th{			
+			text-align: center;
+			padding-top: 3px;
+		    padding-bottom:3px;
+		    }
+
+
+ #content table#tblProblem td{
+ 						width: auto;
+						text-align: left;
+						padding-top: 3px;
+						padding-bottom: 3px;
+						margin:0;
+						border-top: 1px solid white;	
+						
+}
+
+pre.instruction {
+	padding-left:2em;
+	font-size: 14px;
+	background-color: #CCDDEE;	
+	width: auto;
+}

@@ -1,0 +1,35 @@
+<?xml version='1.0'?>
+<!--Tutorial number is mandatory. For each problem, the title, language and brief description are mandatory fields. Test output is mandatory. Others are optional.-->
+<GradingSystem>
+	<tutorial>
+		<tutorialNumber>1</tutorialNumber>
+		<problems>
+			<problem>
+				<title><![CDATA[Hello, World]]></title>
+				<language>Java</language>
+				<briefDescription><![CDATA[It's a hello 
+				world problem]]></briefDescription>
+				<description><![CDATA[description 1]]></description>
+				<inputDescription><![CDATA[input description]]></inputDescription>
+				<outputDescription><![CDATA[output description]]></outputDescription>
+				<sampleInput><![CDATA[No input]]></sampleInput>
+				<sampleOutput><![CDATA[Hello world]]></sampleOutput>
+				<hint><![CDATA[No hint]]></hint>
+				<testcases>
+					<testcase>
+						<testInput><![CDATA[testInput1]]></testInput>
+						<testOutput><![CDATA[testOutput1]]></testOutput>
+					</testcase>
+					<testcase>
+						<testInput><![CDATA[testInput2]]></testInput>
+						<testOutput><![CDATA[testOutput2]]></testOutput>
+					</testcase>
+					<testcase>
+						<testInput><![CDATA[testOutput3]]></testInput>
+						<testOutput><![CDATA[testOutput3]]></testOutput>
+					</testcase>
+				</testcases>
+			</problem>
+		</problems>
+	</tutorial>
+</GradingSystem>

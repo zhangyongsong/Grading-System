@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <!-- To save as $CATALINA_HOME\webapps\gs\WEB-INF\web.xml -->
+    <servlet>
+        <servlet-name>MainServlet</servlet-name>
+        <servlet-class>judge.MainServlet</servlet-class>
+        
+        <init-param>
+            <description>The Path for Exception log file</description>
+            <param-name>logpath</param-name>
+            <param-value>/var/gradingsystem/JudgeException.log</param-value>
+        </init-param>
+        <init-param>
+            <description>The policy file path for  java execution</description>
+            <param-name>javapolicy</param-name>
+            <param-value>/var/gradingsystem/gspolicy</param-value>
+        </init-param>
+        
+    </servlet>
+    
+    <!-- Note: All <servlet> elements MUST be grouped together and
+         placed IN FRONT of the <servlet-mapping> elements -->
+    <servlet-mapping>
+        <servlet-name>MainServlet</servlet-name>
+        <url-pattern>/judge</url-pattern>
+    </servlet-mapping>
+    
+    
+    
+    <context-param>
+        <description>File Root for Grading System on the server</description>
+        <param-name>gsroot</param-name>
+        <param-value>/var/gradingsystem/</param-value>
+    </context-param>
+    
+    <!-- Note these parameters are for database connection 
+    Please change them when deploy the application-->
+    <context-param>
+        <description>The jdbc connection string</description>
+        <param-name>jdbcstr</param-name>
+        <param-value>jdbc:mysql://localhost:3306/gradingsystem</param-value>
+    </context-param>
+    <context-param>
+        <description>Database user for access</description>
+        <param-name>dbuser</param-name>
+        <param-value>gsadmin</param-value>
+    </context-param>
+    <context-param>
+        <description>password</description>
+        <param-name>dbpassword</param-name>
+        <param-value>ntu2011</param-value>
+    </context-param>
+    
+    
+</web-app>

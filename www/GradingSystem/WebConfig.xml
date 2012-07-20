@@ -1,0 +1,43 @@
+<?xml version='1.0'?>
+<GradingSystem>
+	<page logo="images/loginHeader.gif" slogan="Grading System">
+		<loginTitle>Log In</loginTitle>
+		<problemTitle>List of all problems</problemTitle>
+		<answerTitle>Students' Answers</answerTitle>
+		<mainTitle>My Main Page</mainTitle>
+	</page>
+	
+	<!--
+		Email configuration for sending system generated password from
+	-->	
+	<email>
+		<host>smtp.163.com</host>
+		<port>25</port>
+		<username>gradingsystem</username>
+		<password>ntufyp2011</password>
+		<mailbox>gradingsystem@163.com</mailbox>
+		<mailname>Grading System</mailname>
+		<ReplyTo>zhuw0005@ntu.edu.sg</ReplyTo>
+		<CarbonCopy>z080320@ntu.edu.sg</CarbonCopy>
+	</email>
+	
+	<!--
+		platform could be windows or linux for the server
+	-->
+	<!--	
+	<platform>windows</platform>
+	-->
+	
+		<platform>linux</platform>
+
+	<!--
+		database stores information about db used
+	-->
+	<database type="mysql" addr="localhost">
+		<dbName>gradingsystem</dbName>
+		<user password="ntu2011">gsadmin</user>
+	</database>
+
+</GradingSystem>
+
+
