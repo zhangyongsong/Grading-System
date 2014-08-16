@@ -1,0 +1,21 @@
+# ignore WAMP server folders
+alias/
+apps/
+bin/
+lang/
+logs/
+scripts/
+tmp/
+tools/
+vhosts/
+
+# ignore WAMP files
+*.bmp
+*.dat
+*.exe
+license.*
+uninstall_services.*
+wampmanager.*
+
+# ignore the php test file
+www/testmysql.php
